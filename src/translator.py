@@ -16,7 +16,7 @@ def get_client() -> OpenAI:
     global _client
     if _client is None:
         api_key = os.getenv("DEEPSEEK_API_KEY")
-        base_url = os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com/v1")
+        base_url = os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com")
         if not api_key:
             raise ValueError(
                 "DEEPSEEK_API_KEY not set. Add it to your .env file."
@@ -51,7 +51,11 @@ def translate_batch(
     count = len(entries)
     numbered = "\n".join(e.replace("\n", " / ") for e in entries)
 
-    batch_prompt = batch_prompt_template.format(count=count, entries=numbered)
+    batch_prompt = (
+        batch_prompt_template
+        .replace("{count}", str(count))
+        .replace("{entries}", numbered)
+    )
 
     response = client.chat.completions.create(
         model=model,

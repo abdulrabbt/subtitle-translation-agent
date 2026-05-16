@@ -108,7 +108,7 @@ Set via `.env` file (copy from `.env.example`):
 | Variable            | Required | Default                       | Description                          |
 | ------------------- | -------- | ----------------------------- | ------------------------------------ |
 | `DEEPSEEK_API_KEY`  | ✅ Yes   | —                             | DeepSeek API key                     |
-| `DEEPSEEK_BASE_URL` | No       | `https://api.deepseek.com/v1` | DeepSeek API endpoint                |
+| `DEEPSEEK_BASE_URL` | No       | `https://api.deepseek.com`   | DeepSeek API endpoint                |
 | `DEEPSEEK_MODEL`    | No       | `deepseek-v4-flash`           | Model name (e.g., `deepseek-v4-pro`) |
 | `SOURCE_LANG`       | No       | `en`                          | Default source language code         |
 | `TARGET_LANG`       | No       | `ar`                          | Default target language code         |
