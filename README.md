@@ -164,10 +164,10 @@ python main.py TheMatrix.srt TheMatrix.ar.srt
 ## Dependencies (`requirements.txt`)
 
 ```
-langgraph>=0.2.0
-openai>=1.0.0
-srt>=3.5.0
-python-dotenv>=1.0.0
-pydantic>=2.0.0
-pytest>=8.0.0
+langgraph>=1.2.20
+openai>=3.46.0
+srt>=3.5.3
+python-dotenv>=1.2.4
+pydantic>=2.14.3
+pytest>=9.2.0
 ```
